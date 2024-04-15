@@ -22,8 +22,6 @@ class _TodoListState extends State<TodoList> {
     _loadTodos();
   }
 
-  //load, add, delete関数をまとめたクラス作ってriverpodで管理した方がよくない？->NotifierProvider
-  //todosもriverpodで管理した方がいいと思う()->取ってきたデータをriverpodの変数に保存して使う
   void _loadTodos() async {
     final url = Uri.https(
         'todo-41b26-default-rtdb.asia-southeast1.firebasedatabase.app',
