@@ -27,7 +27,7 @@ class _TodoListState extends ConsumerState<TodoList> {
 
   void _loadTodos() async {
     final url = Uri.https(
-        'todo-41b26-default-rtdb.asia-southeast1.firebasedatabase.app',
+        'todo-5933a-default-rtdb.asia-southeast1.firebasedatabase.app',
         'todo-list.json');
 
     try {
@@ -65,7 +65,7 @@ class _TodoListState extends ConsumerState<TodoList> {
     final index = todos.indexOf(todo);
     todos = [...todos.sublist(0, index), ...todos.sublist(index + 1)];
     final url = Uri.https(
-        'todo-41b26-default-rtdb.asia-southeast1.firebasedatabase.app',
+        'todo-5933a-default-rtdb.asia-southeast1.firebasedatabase.app',
         'todo-list/${todo.id}.json');
     final response = await http.delete(url);
     if (response.statusCode >= 400) {
